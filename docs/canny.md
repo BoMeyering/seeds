@@ -2,4 +2,4 @@
 title: Canny Edge Detection
 ---
 
-<a href="index.md">Table of Contents</a>
+<a href="index.html">Table of Contents</a>
