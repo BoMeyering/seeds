@@ -1,6 +1,7 @@
 ---
 name: Reading Image Files with OpenCV
 ---
+<a href="./">Home</a>
 
 ## Getting Started
 
@@ -40,7 +41,7 @@ This tells us that our image is 4507x3307 pixels (W x H). Open CV reads in a 2D 
 We can show our image using `cv2.imshow()`. I like to create named windows so I can specify details such as the size of the window (`cv2.WINDOW_NORMAL`), etc. Passing in a `0` to `cv2.waitKey()` allows to automatically closing the image window upon any keystroke. You can manually set it to be a specific key if you wanted, or pass an integer number in milliseconds to tell it to close after a given amount of time has passed.
 
 ```
-cv2.namedWindo('my_image', cv2.WINDOW_NORMAL)
+cv2.namedWindow('my_image', cv2.WINDOW_NORMAL)
 cv2.imshow('my_image', img)
 cv2.waitKey(0)
 cv2.destroyWindow()
