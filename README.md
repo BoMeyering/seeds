@@ -1,2 +1,2 @@
 # seeds
-A repo to hode code examples for analyzing seed images
+A repo to hold code examples for analyzing seed images
