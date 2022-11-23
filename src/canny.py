@@ -34,3 +34,35 @@ closed_edge = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, kernel)
 showImage(closed_edge)
 
 print(edges.shape)
+
+contours, _ = cv2.findContours(closed_edge, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+print(contours)
+print(type(contours))
+print(len(contours))
+print(contours[0].shape)
+
+
+def closedContours(src: np.ndarray, threshold1: int, threshold2: int , kernel_size: int) -> tuple:
+	"""
+	Take a source image
+	Finds the image edges using the Canny algorithm
+	Closes edge gaps with morphology close operations
+	Finds all object external contours
+	:Return: a tuple of contours
+	"""
+	assert type(src)==np.ndarray
+	kernel = np.ones((kernel_size, kernel_size), np.uint8)
+	edges = cv2.Canny(src, threshold1, threshold2)
+	closed = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, kernel)
+	cnt, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+	return contours
+
+
+cnt = closedContours(img, 600, 150, 5)
+print(len(cnt))
+
+cont_img = cv2.drawContours(img, cnt, -1, (255, 0, 0), 3)
+
+showImage(cont_img)
