@@ -47,7 +47,7 @@ cv2.waitKey(0)
 cv2.destroyWindow()
 ```
 A new window should pop up like so
-<img src="img/my_image.png" style="max-width: 100%;" alt="Showing images in OpenCV">
+<img src="img/my_image.png" style="max-width: 100%;" title="Showing image in OpenCV" alt="Showing images in OpenCV">
 
 We will be looking at images a lot so let's write a a function to make our lives easier.
 ```
