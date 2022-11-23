@@ -68,4 +68,9 @@ showImage(img)
 ```
 
 ### Test Header
-<a href="./" style="text-align: left">Home</a><a href="canny" style="text-align: right">Edge detection and object contours</a>
+<div align="left">
+	<a href="./" style="text-align: left">Home</a>
+</div>
+<div align="right">
+	<a href="canny" style="text-align: right">Edge detection and object contours</a>
+</div>
