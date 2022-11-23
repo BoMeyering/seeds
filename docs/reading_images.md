@@ -48,3 +48,24 @@ cv2.destroyWindow()
 ```
 A new window should pop up like so
 <img src="img/my_image.png" style="max-width: 100%;" alt="Showing images in OpenCV">
+
+We will be looking at images a lot so let's write a a function to make our lives easier.
+```
+def showImage(src):
+	'''
+	Shows an image and closes it upon a keystroke
+	'''
+	cv2.namedWindow('image', cv2.WINDOW_GUI_NORMAL)
+	cv2.imshow('image', src)
+	if cv2.waitKey(0) & 0xFF == ord('q'):
+		cv2.destroyWindow('image')
+
+```
+
+Now you can call the function on any image like this to open a window and close when you press `q`.
+```
+showImage(img)
+```
+
+### Test Header
+<a href="./" style="text-align: right">Home</a><a href="canny" style="text-align: left">Edge detection and object contours</a>

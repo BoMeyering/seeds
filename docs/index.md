@@ -8,4 +8,4 @@ In this set of tutorials, I will go over the basics of using the OpenCV library 
 
 ## Table of Contents
 1. <a href="reading_images">Reading image files in OpenCV<a/>
-2. <a href="canny">Edge Detection using Canny</a> 
+2. <a href="canny">Edge Detection and object contours</a> 
