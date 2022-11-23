@@ -22,3 +22,15 @@ def showImage(src):
 
 
 showImage(img)
+
+kernel = np.ones((5, 5), np.uint8)
+
+edges = cv2.Canny(img, 100, 200)
+showImage(edges)
+print(edges)
+
+closed_edge = cv2.morphologyEx(edges, cv2.MORPH_CLOSE, kernel)
+
+showImage(closed_edge)
+
+print(edges.shape)
